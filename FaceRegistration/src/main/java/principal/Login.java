@@ -5,6 +5,8 @@
  */
 package principal;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author virtu
@@ -63,7 +65,7 @@ public class Login extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Enter");
         jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.SW_RESIZE_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.setOpaque(true);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,7 +85,12 @@ public class Login extends javax.swing.JFrame {
         String user= txt_user.getText();
         String password=txt_pass.getText();
         if (user.equals("admin")&& password.equals("admin")) {
+            Menu menu=new Menu();
+            menu.setVisible(true);
+            dispose();
             
+        }else{
+            JOptionPane.showMessageDialog(null,  "Try Again");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
